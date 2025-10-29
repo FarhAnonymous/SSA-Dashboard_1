@@ -1,0 +1,5 @@
+{
+  "name": "Excel Formula Analyzer AI",
+  "description": "An intelligent web application that allows users to upload Excel files. It uses AI to deeply analyze the data, formulas, and structure of the spreadsheet to provide insightful reports and identify potential issues.",
+  "requestFramePermissions": []
+}

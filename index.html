@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Sustainability Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            green: {
+              50: '#f2f9f1',
+              100: '#e3f2e2',
+              200: '#c7e5c5',
+              300: '#a5d6a0',
+              400: '#89c982',
+              500: '#72bf6a',
+              600: '#5da856',
+              700: '#4a9b42',
+              800: '#3a7a35',
+              900: '#2d5e2a',
+            },
+          },
+          animation: {
+            'gradient': 'gradient 5s ease-in-out infinite',
+            'background-pan': 'background-pan 15s ease-in-out infinite',
+            'subtle-float': 'subtle-float 4s ease-in-out infinite',
+            'pulse-glow': 'pulse-glow 3s ease-in-out infinite',
+          },
+          keyframes: {
+            gradient: {
+              '0%, 100%': {
+                'background-position': '0% 50%',
+              },
+              '50%': {
+                'background-position': '100% 50%',
+              },
+            },
+            'background-pan': {
+              '0%': { 'background-position': '0% 50%' },
+              '50%': { 'background-position': '100% 50%' },
+              '100%': { 'background-position': '0% 50%' },
+            },
+            'subtle-float': {
+              '0%, 100%': { transform: 'translateY(0) rotate(-1deg)' },
+              '50%': { transform: 'translateY(-4px) rotate(1deg)' },
+            },
+            'pulse-glow': {
+              '0%, 100%': { filter: 'drop-shadow(0 0 3px rgba(114, 191, 106, 0.4))' },
+              '50%': { filter: 'drop-shadow(0 0 8px rgba(114, 191, 106, 0.8))' },
+            },
+          },
+        },
+      },
+    };
+    </script>
+    <script src="https://cdn.sheetjs.com/xlsx-0.20.2/package/dist/xlsx.full.min.js"></script>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.27.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-gray-100 dark:bg-gray-900">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
